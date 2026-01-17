@@ -1,22 +1,40 @@
 import { Button } from "@/components/ui/button"
-import { Mail, Phone, MapPin } from "lucide-react"
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+} from "lucide-react"
 
 export default function ContactCTA() {
   return (
     <section className="py-20 md:py-32 bg-gradient-to-br from-primary via-primary/80 to-accent text-primary-foreground">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Invest?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Invest?
+            </h2>
             <p className="text-lg opacity-90 mb-8">
-              Connect with our investment team to explore opportunities tailored to your business goals.
+              Connect with our investment team to explore opportunities tailored
+              to your business goals.
             </p>
 
-            <div className="space-y-4">
+            {/* Contact Details */}
+            <div className="space-y-4 mb-10">
               {[
                 { icon: Mail, label: "Email", value: "invest@kilifi.go.ke" },
                 { icon: Phone, label: "Phone", value: "+254 (0) 41 234 5678" },
-                { icon: MapPin, label: "Address", value: "Kilifi County Government, Kilifi" },
+                {
+                  icon: MapPin,
+                  label: "Address",
+                  value: "P.O. Box 491, 80108 Kilifi, Kenya",
+                },
               ].map((contact, idx) => {
                 const Icon = contact.icon
                 return (
@@ -32,8 +50,65 @@ export default function ContactCTA() {
                 )
               })}
             </div>
+
+            {/* Social Media */}
+            <div>
+              <p className="font-semibold mb-4">Follow Us</p>
+              <div className="flex items-center gap-4 flex-wrap">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="w-10 h-10 rounded-lg bg-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/30 transition"
+                >
+                  <Facebook size={18} />
+                </a>
+
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter / X"
+                  className="w-10 h-10 rounded-lg bg-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/30 transition"
+                >
+                  <Twitter size={18} />
+                </a>
+
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="w-10 h-10 rounded-lg bg-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/30 transition"
+                >
+                  <Linkedin size={18} />
+                </a>
+
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="w-10 h-10 rounded-lg bg-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/30 transition"
+                >
+                  <Instagram size={18} />
+                </a>
+
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="w-10 h-10 rounded-lg bg-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/30 transition"
+                >
+                  <Youtube size={18} />
+                </a>
+              </div>
+            </div>
           </div>
 
+          {/* Right Form */}
           <div className="bg-white/10 backdrop-blur rounded-xl p-8">
             <h3 className="text-xl font-semibold mb-6">Send us a Message</h3>
             <form className="space-y-4">
@@ -42,16 +117,19 @@ export default function ContactCTA() {
                 placeholder="Your Name"
                 className="w-full px-4 py-2 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-primary-foreground/50"
               />
+
               <input
                 type="email"
                 placeholder="Your Email"
                 className="w-full px-4 py-2 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-primary-foreground/50"
               />
+
               <textarea
                 placeholder="Your Message"
                 rows={4}
                 className="w-full px-4 py-2 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:border-primary-foreground/50"
               />
+
               <Button className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold">
                 Send Message
               </Button>

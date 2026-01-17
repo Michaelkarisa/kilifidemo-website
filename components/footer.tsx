@@ -54,9 +54,7 @@ export default function Footer() {
             © {currentYear} Kilifi County Government. All rights reserved.
           </p>
           <div className="flex items-center gap-2 text-sm">
-            <span>Made with</span>
-            <Heart size={16} className="fill-current" />
-            <span>for Kilifi County</span>
+            <span>Made by Michael Karisa</span>
           </div>
         </div>
       </div>
