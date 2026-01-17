@@ -11,15 +11,15 @@ export const metadata: Metadata = {
   title: "Kilifi County Government - Investment Portal",
   description:
     "Kilifi County Government Investment Corporation - Invest in Kilifi's Blue Economy, Tourism, and Sustainable Development",
-  generator: "v0.app",
+  generator: "",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "/download.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: "/download.png",
         media: "(prefers-color-scheme: dark)",
       },
       {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         type: "image/svg+xml",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/download.png",
   },
 }
 
