@@ -24,8 +24,8 @@ const news = [
 ]
 
 export default function NewsSection() {
-  const { ref } = useScrollAnimation()
-const isVisible = true;
+  const { ref ,isVisible} = useScrollAnimation()
+    //const isVisible = true;
   return (
     <section ref={ref} id="news" className="py-20 md:py-32 bg-secondary/5">
       <div className="container mx-auto px-4">
