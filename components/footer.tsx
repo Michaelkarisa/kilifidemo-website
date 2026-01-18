@@ -39,7 +39,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 {section.links.map((link, i) => (
                   <li key={i}>
-                    <a href="#" className="opacity-80 hover:opacity-100 text-sm transition">
+                    <a href = {"#"+link.toLocaleLowerCase()} className="opacity-80 hover:opacity-100 text-sm transition">
                       {link}
                     </a>
                   </li>
